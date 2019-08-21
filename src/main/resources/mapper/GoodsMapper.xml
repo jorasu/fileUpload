@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"  >
+<mapper namespace="com.dao.GoodsMapper">
+    <select id="queryAll" resultType="map">
+        select * from goods
+    </select>
+
+    <insert id="add" >
+       insert  into goods(goodsName, billStatus, goodsDistrict, goodsPrice, goodsCount, creationTime, file)
+       values (#{goodsName},#{billStatus},#{goodsDistrict},#{goodsPrice},#{goodsCount},#{creationTime},#{file})
+    </insert>
+
+</mapper>
